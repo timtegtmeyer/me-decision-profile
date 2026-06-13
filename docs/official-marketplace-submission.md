@@ -24,7 +24,7 @@ directory only adds a pinned entry to its `.claude-plugin/marketplace.json`).
   "source": {
     "source": "url",
     "url": "https://github.com/timtegtmeyer/me-decision-profile.git",
-    "sha": "3ad9ac6e51639c8bd1694130f64b65a61d636902"
+    "sha": "d4b3bb49805c0fa82d2376dda98e2147b2bbf142"
   },
   "category": "productivity",
   "homepage": "https://github.com/timtegtmeyer/me-decision-profile"
@@ -64,7 +64,7 @@ and no MCP server.
 
 ### Source
 - Repo: https://github.com/timtegtmeyer/me-decision-profile
-- Pinned sha: `3ad9ac6e51639c8bd1694130f64b65a61d636902`
+- Pinned sha: `d4b3bb49805c0fa82d2376dda98e2147b2bbf142`
 - License: MIT
 
 ### Privacy / security
