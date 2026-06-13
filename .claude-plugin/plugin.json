@@ -1,0 +1,19 @@
+{
+  "name": "me-decision-profile",
+  "description": "Build a person's numeric Decision Profile via a forced-tradeoff interview + stress scenarios, then give value-aligned, evidence-cited advice. Commands: /me-add <name> <language> to build/update a profile, /me-ask <name> to ask a decision question under one, and /me for the interactive flow. Trilingual (en/de/es). Stores only computed integers + the name; never raw answers.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tim Niko Tegtmeyer",
+    "email": "tim@timniko.com"
+  },
+  "homepage": "https://github.com/timtegtmeyer/me-decision-profile",
+  "repository": "https://github.com/timtegtmeyer/me-decision-profile",
+  "license": "MIT",
+  "keywords": [
+    "decision-making",
+    "advice",
+    "values",
+    "profile",
+    "multilingual"
+  ]
+}

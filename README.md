@@ -38,8 +38,22 @@ in `skills/me/SKILL.md`. All shared assets live under `skills/me/`.
 
 Requires Python 3 (standard library only) and Claude Code.
 
+### Option A — as a Claude Code plugin (recommended)
+
+This repo is also a one-plugin marketplace. From inside Claude Code:
+
+```
+/plugin marketplace add timtegtmeyer/me-decision-profile
+/plugin install me-decision-profile@me-decision-profile
+```
+
+That installs the `me`, `me-add`, and `me-ask` skills as a managed plugin (updatable with
+`/plugin`). Then run `/me-add <name> <language>`.
+
+### Option B — manual copy
+
 ```bash
-git clone https://github.com/<your-account>/me-decision-profile.git
+git clone https://github.com/timtegtmeyer/me-decision-profile.git
 cd me-decision-profile
 ./install.sh           # copies the 3 skills into ~/.claude/skills/
 ```

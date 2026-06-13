@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "me-decision-profile",
+  "description": "Decision Profile tools for Claude Code: build a numeric model of a person's values and get advice aligned with who they actually are.",
+  "owner": {
+    "name": "Tim Niko Tegtmeyer",
+    "email": "tim@timniko.com"
+  },
+  "plugins": [
+    {
+      "name": "me-decision-profile",
+      "description": "Build a person's numeric Decision Profile via a forced-tradeoff interview + stress scenarios, then give value-aligned, evidence-cited advice. Commands: /me-add <name> <language>, /me-ask <name>, and /me. Trilingual (en/de/es). Stores only computed integers + the name; never raw answers.",
+      "author": {
+        "name": "Tim Niko Tegtmeyer",
+        "email": "tim@timniko.com"
+      },
+      "source": ".",
+      "category": "productivity",
+      "homepage": "https://github.com/timtegtmeyer/me-decision-profile"
+    }
+  ]
+}
