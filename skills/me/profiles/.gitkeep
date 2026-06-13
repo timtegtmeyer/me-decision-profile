@@ -1,0 +1,2 @@
+# Profiles live here as <slug>.dpf.json (for AI) + <slug>.report.md (for humans).
+# Numeric-only JSON; no raw answers are ever stored. See ../references/schema.md.

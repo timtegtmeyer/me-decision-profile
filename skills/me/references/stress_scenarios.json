@@ -1,0 +1,758 @@
+{
+  "version": 1,
+  "note": "10 concrete stress-test dilemmas presented AFTER the questionnaire. Revealed-preference behavior under a real scenario is weighted higher (w up to 3) and overrides stated values when they conflict. At runtime, Claude SHOULD personalize 3-4 of these (or add new ones) to the user's emerging profile and life facts, keeping the same option/map structure and using only valid dimension dot-paths. Each option's arms must pull APART — never credit the same dimension on competing arms. Scored by scripts/score.py exactly like questions; these carry `\"stress\": true`.",
+  "scenarios": [
+    {
+      "id": "st01",
+      "cat": "stress",
+      "stress": true,
+      "q": {
+        "en": "Your 14-year-old begs for TikTok — 'everyone has it,' and being left out is genuinely hurting them socially. You know the algorithm's downsides. What do you ACTUALLY do?",
+        "de": "Dein 14-jähriges Kind bettelt um TikTok – 'alle haben es', und außen vor zu sein, schadet ihm sozial wirklich. Du kennst die Schattenseiten des Algorithmus. Was tust du WIRKLICH?",
+        "es": "Tu hijo de 14 años te suplica tener TikTok: 'todos lo tienen', y quedarse fuera le está haciendo daño social de verdad. Conoces las desventajas del algoritmo. ¿Qué haces REALMENTE?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Allow it, with open conversations and loose limits — connection matters",
+            "de": "Erlaub es, mit offenen Gesprächen und lockeren Grenzen – Verbindung zählt",
+            "es": "Permítelo, con conversaciones abiertas y límites flexibles: la conexión importa"
+          },
+          "map": [
+            {
+              "d": "par.tec",
+              "w": 3
+            },
+            {
+              "d": "par.soc",
+              "w": 2
+            },
+            {
+              "d": "par.ind",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Allow a limited or monitored version as a compromise",
+            "de": "Erlaub eine eingeschränkte oder überwachte Version als Kompromiss",
+            "es": "Permite una versión limitada o supervisada como compromiso"
+          },
+          "map": [
+            {
+              "d": "par.tec",
+              "w": 2
+            },
+            {
+              "d": "par.dis",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "Hold the line — no — and absorb their anger",
+            "de": "Bleib hart – nein – und halt seine Wut aus",
+            "es": "Mantente firme: no, y aguanta su enfado"
+          },
+          "map": [
+            {
+              "d": "par.dis",
+              "w": 3
+            },
+            {
+              "d": "cv.sec",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "st02",
+      "cat": "stress",
+      "stress": true,
+      "q": {
+        "en": "Your child is failing at school but genuinely happy — great friends, loves their hobbies, no anxiety. The school says intervene hard. You...",
+        "de": "Dein Kind versagt in der Schule, ist aber wirklich glücklich – tolle Freunde, liebt seine Hobbys, keine Ängste. Die Schule sagt, du sollst hart eingreifen. Du…",
+        "es": "Tu hijo va mal en el colegio pero es genuinamente feliz: buenos amigos, le encantan sus aficiones, sin ansiedad. El colegio dice que intervengas con firmeza. Tú…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Let them be happy — grades aren't everything",
+            "de": "Lass es glücklich sein – Noten sind nicht alles",
+            "es": "Déjalo ser feliz: las notas no lo son todo"
+          },
+          "map": [
+            {
+              "d": "par.soc",
+              "w": 2
+            },
+            {
+              "d": "cv.fam",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Intervene hard — potential matters; they'll thank me later",
+            "de": "Greif hart ein – Potenzial zählt; später wird es mir danken",
+            "es": "Interviene con firmeza: el potencial importa; algún día me lo agradecerá"
+          },
+          "map": [
+            {
+              "d": "par.acd",
+              "w": 3
+            },
+            {
+              "d": "par.dis",
+              "w": 2
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "Find the root cause first, then support with a light touch",
+            "de": "Finde zuerst die Ursache, dann unterstütze mit leichter Hand",
+            "es": "Busca primero la causa de raíz, luego apoya con mano suave"
+          },
+          "map": [
+            {
+              "d": "dec.evi",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "st03",
+      "cat": "stress",
+      "stress": true,
+      "q": {
+        "en": "You're settled with a mortgage and kids. A former colleague offers you a co-founder seat: huge upside, but a 60% pay cut for two years and you might lose it all. Your partner is nervous. You...",
+        "de": "Du bist sesshaft, mit Hypothek und Kindern. Ein früherer Kollege bietet dir einen Mitgründer-Posten: riesiges Aufwärtspotenzial, aber 60 % Gehaltskürzung für zwei Jahre, und du könntest alles verlieren. Dein Partner ist nervös. Du…",
+        "es": "Estás asentado, con hipoteca e hijos. Un excompañero te ofrece un puesto de cofundador: enorme potencial, pero un recorte del 60 % del sueldo durante dos años y podrías perderlo todo. Tu pareja está nerviosa. Tú…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Take it — this is the shot",
+            "de": "Nimm es an – das ist die Chance",
+            "es": "Acéptalo: esta es la oportunidad"
+          },
+          "map": [
+            {
+              "d": "risk.car",
+              "w": 3
+            },
+            {
+              "d": "risk.fin",
+              "w": 2
+            },
+            {
+              "d": "cv.ach",
+              "w": 2
+            },
+            {
+              "d": "pri.car",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Pass — too much riding on stability right now",
+            "de": "Lehn ab – gerade hängt zu viel an Stabilität",
+            "es": "Recházalo: ahora mismo depende demasiado de la estabilidad"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 2
+            },
+            {
+              "d": "cv.fam",
+              "w": 2
+            },
+            {
+              "d": "pri.fam",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "Negotiate a smaller bet first — advisor or part-time",
+            "de": "Handle zuerst einen kleineren Einsatz aus – als Berater oder in Teilzeit",
+            "es": "Negocia primero una apuesta más pequeña: asesor o a tiempo parcial"
+          },
+          "map": [
+            {
+              "d": "dec.evi",
+              "w": 1
+            },
+            {
+              "d": "risk.car",
+              "w": 1
+            },
+            {
+              "d": "dec.lng",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "st04",
+      "cat": "stress",
+      "stress": true,
+      "q": {
+        "en": "Your aging parent needs real care. Providing it means stepping back from your career at its most critical moment. You...",
+        "de": "Dein alterndes Elternteil braucht echte Pflege. Sie zu leisten heißt, im kritischsten Moment in deiner Karriere kürzerzutreten. Du…",
+        "es": "Tu padre o madre mayor necesita cuidados de verdad. Proporcionarlos significa dar un paso atrás en tu carrera en su momento más crítico. Tú…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Step back — family comes first",
+            "de": "Tritt kürzer – Familie geht vor",
+            "es": "Da un paso atrás: la familia es lo primero"
+          },
+          "map": [
+            {
+              "d": "pri.fam",
+              "w": 3
+            },
+            {
+              "d": "cv.fam",
+              "w": 2
+            },
+            {
+              "d": "cft.har",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Keep your trajectory; arrange and pay for care instead",
+            "de": "Halte deinen Kurs; organisiere und bezahle stattdessen Pflege",
+            "es": "Mantén tu trayectoria; en su lugar organiza y paga los cuidados"
+          },
+          "map": [
+            {
+              "d": "pri.car",
+              "w": 2
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            },
+            {
+              "d": "dec.evi",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "Try to do both and burn the candle at both ends",
+            "de": "Versuche beides und brenne an beiden Enden",
+            "es": "Intenta hacer ambas cosas y quémate por los dos lados"
+          },
+          "map": [
+            {
+              "d": "par.emo",
+              "w": 1
+            },
+            {
+              "d": "dec.int",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "st05",
+      "cat": "stress",
+      "stress": true,
+      "q": {
+        "en": "You discover your employer is doing something legal but clearly wrong to customers. Speaking up risks your job and income. You...",
+        "de": "Du entdeckst, dass dein Arbeitgeber etwas Legales, aber klar Falsches gegenüber Kunden tut. Den Mund aufzumachen gefährdet deinen Job und dein Einkommen. Du…",
+        "es": "Descubres que tu empleador hace algo legal pero claramente injusto con los clientes. Alzar la voz pone en riesgo tu empleo y tus ingresos. Tú…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Raise it forcefully and accept the career cost",
+            "de": "Sprich es entschieden an und nimm die Karrierekosten in Kauf",
+            "es": "Plantéalo con contundencia y asume el coste para tu carrera"
+          },
+          "map": [
+            {
+              "d": "cft.dir",
+              "w": 2
+            },
+            {
+              "d": "cft.asr",
+              "w": 2
+            },
+            {
+              "d": "cv.ctr",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Document it carefully and move toward the exit",
+            "de": "Dokumentier es sorgfältig und steuere auf den Ausgang zu",
+            "es": "Documéntalo con cuidado y ve encaminándote hacia la salida"
+          },
+          "map": [
+            {
+              "d": "dec.lng",
+              "w": 1
+            },
+            {
+              "d": "cft.har",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "Protect your income and your family's stability; stay out of it",
+            "de": "Schütze dein Einkommen und die Stabilität deiner Familie; halt dich raus",
+            "es": "Protege tus ingresos y la estabilidad de tu familia; mantente al margen"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 2
+            },
+            {
+              "d": "cv.fam",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "st06",
+      "cat": "stress",
+      "stress": true,
+      "q": {
+        "en": "Years into a stable relationship, you meet someone who makes you feel intensely alive. Nothing has happened. You...",
+        "de": "Jahre in einer stabilen Beziehung lernst du jemanden kennen, der dich intensiv lebendig fühlen lässt. Es ist nichts passiert. Du…",
+        "es": "Llevas años en una relación estable y conoces a alguien que te hace sentir intensamente vivo. No ha pasado nada. Tú…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Cut contact — protect the commitment",
+            "de": "Brich den Kontakt ab – schütze die Bindung",
+            "es": "Corta el contacto: protege el compromiso"
+          },
+          "map": [
+            {
+              "d": "cv.fam",
+              "w": 3
+            },
+            {
+              "d": "cft.bnd",
+              "w": 2
+            },
+            {
+              "d": "dec.lng",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Tell your partner honestly and work through it together",
+            "de": "Sag es deinem Partner ehrlich und arbeitet es gemeinsam auf",
+            "es": "Díselo a tu pareja con honestidad y resolvedlo juntos"
+          },
+          "map": [
+            {
+              "d": "cft.dir",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "Keep the friendship — you can handle it",
+            "de": "Behalte die Freundschaft – du kommst damit klar",
+            "es": "Mantén la amistad: puedes con ello"
+          },
+          "map": [
+            {
+              "d": "cv.fre",
+              "w": 2
+            },
+            {
+              "d": "dec.int",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "st07",
+      "cat": "stress",
+      "stress": true,
+      "q": {
+        "en": "You unexpectedly receive €500,000, no strings attached. Your first instinct?",
+        "de": "Du erhältst unerwartet 500.000 €, ohne Bedingungen. Dein erster Impuls?",
+        "es": "Recibes inesperadamente 500.000 €, sin condiciones. ¿Tu primer impulso?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Invest and secure it — freedom and safety for the future",
+            "de": "Anlegen und absichern – Freiheit und Sicherheit für die Zukunft",
+            "es": "Invertirlo y asegurarlo: libertad y seguridad para el futuro"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 2
+            },
+            {
+              "d": "cv.fre",
+              "w": 2
+            },
+            {
+              "d": "dec.lng",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Use it to finally pursue the thing I care about",
+            "de": "Damit endlich das verfolgen, was mir am Herzen liegt",
+            "es": "Usarlo para por fin perseguir aquello que me importa"
+          },
+          "map": [
+            {
+              "d": "pri.pur",
+              "w": 2
+            },
+            {
+              "d": "cv.cur",
+              "w": 1
+            },
+            {
+              "d": "risk.car",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "Give a meaningful chunk away or help others",
+            "de": "Einen ordentlichen Teil verschenken oder anderen helfen",
+            "es": "Donar una parte considerable o ayudar a otros"
+          },
+          "map": [
+            {
+              "d": "cv.ctr",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "label": {
+            "en": "Upgrade life — house, experiences, the things I've wanted",
+            "de": "Das Leben aufwerten – Haus, Erlebnisse, die Dinge, die ich mir gewünscht habe",
+            "es": "Mejorar mi vida: casa, experiencias, las cosas que siempre he querido"
+          },
+          "map": [
+            {
+              "d": "cv.wlt",
+              "w": 1
+            },
+            {
+              "d": "cv.sta",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "st08",
+      "cat": "stress",
+      "stress": true,
+      "q": {
+        "en": "Your 18-year-old wants to skip university for something risky and unproven — art, a startup, a sport. They're talented, but it's a long shot. You...",
+        "de": "Dein 18-Jähriges will die Uni ausfallen lassen für etwas Riskantes und Unerprobtes – Kunst, ein Start-up, einen Sport. Es ist talentiert, aber es ist ein gewagtes Spiel. Du…",
+        "es": "Tu hijo de 18 años quiere saltarse la universidad por algo arriesgado y sin garantías: arte, una startup, un deporte. Tiene talento, pero es una apuesta muy incierta. Tú…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Back them fully — it's their life and their risk to take",
+            "de": "Steh voll hinter ihm – es ist sein Leben und sein Risiko",
+            "es": "Apóyalo del todo: es su vida y su riesgo"
+          },
+          "map": [
+            {
+              "d": "par.ind",
+              "w": 3
+            },
+            {
+              "d": "par.rsk",
+              "w": 2
+            },
+            {
+              "d": "risk.par",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Insist on a backup — a degree first, then try",
+            "de": "Besteh auf einem Plan B – erst ein Abschluss, dann probieren",
+            "es": "Insiste en un plan B: primero un título, luego que lo intente"
+          },
+          "map": [
+            {
+              "d": "par.dis",
+              "w": 2
+            },
+            {
+              "d": "cv.sec",
+              "w": 2
+            },
+            {
+              "d": "dec.evi",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "Refuse to support it — too risky",
+            "de": "Weiger dich, es zu unterstützen – zu riskant",
+            "es": "Niégate a apoyarlo: demasiado arriesgado"
+          },
+          "map": [
+            {
+              "d": "par.dis",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "st09",
+      "cat": "stress",
+      "stress": true,
+      "q": {
+        "en": "A health scare makes you confront that you might not have as long as you assumed. What actually changes?",
+        "de": "Ein gesundheitlicher Schreck zwingt dich zu erkennen, dass du vielleicht nicht so viel Zeit hast wie angenommen. Was ändert sich wirklich?",
+        "es": "Un susto de salud te hace afrontar que quizá no tengas tanto tiempo como suponías. ¿Qué cambia de verdad?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Work less and be present with the people I love, now",
+            "de": "Weniger arbeiten und jetzt für die Menschen da sein, die ich liebe",
+            "es": "Trabajar menos y estar presente con quienes amo, ahora"
+          },
+          "map": [
+            {
+              "d": "pri.fam",
+              "w": 2
+            },
+            {
+              "d": "cv.fam",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Finally take the big swings I've been deferring",
+            "de": "Endlich die großen Sprünge wagen, die ich aufgeschoben habe",
+            "es": "Por fin dar los grandes pasos que he estado aplazando"
+          },
+          "map": [
+            {
+              "d": "risk.car",
+              "w": 2
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            },
+            {
+              "d": "pri.pur",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "Double down on health, discipline and longevity",
+            "de": "Voll auf Gesundheit, Disziplin und Langlebigkeit setzen",
+            "es": "Apostar de lleno por la salud, la disciplina y la longevidad"
+          },
+          "map": [
+            {
+              "d": "dec.evi",
+              "w": 1
+            },
+            {
+              "d": "par.dis",
+              "w": 1
+            },
+            {
+              "d": "cv.sec",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "label": {
+            "en": "Honestly, not much — I already live aligned with what matters",
+            "de": "Ehrlich gesagt, nicht viel – ich lebe schon im Einklang mit dem, was zählt",
+            "es": "Sinceramente, poco: ya vivo en sintonía con lo que importa"
+          },
+          "map": [
+            {
+              "d": "dec.lng",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "st10",
+      "cat": "stress",
+      "stress": true,
+      "q": {
+        "en": "Your whole social or professional circle holds a view you've come to believe is wrong. Voicing yours will cost you belonging. You...",
+        "de": "Dein gesamtes soziales oder berufliches Umfeld vertritt eine Ansicht, die du inzwischen für falsch hältst. Deine zu äußern, kostet dich die Zugehörigkeit. Du…",
+        "es": "Todo tu círculo social o profesional sostiene una postura que has llegado a creer equivocada. Expresar la tuya te costará la pertenencia. Tú…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Say it anyway — I can't pretend",
+            "de": "Sag es trotzdem – ich kann nicht so tun als ob",
+            "es": "Dilo de todos modos: no puedo fingir"
+          },
+          "map": [
+            {
+              "d": "cft.asr",
+              "w": 3
+            },
+            {
+              "d": "cft.dir",
+              "w": 2
+            },
+            {
+              "d": "cv.fre",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Stay quiet — belonging matters more than being right here",
+            "de": "Bleib still – Zugehörigkeit zählt hier mehr als recht zu haben",
+            "es": "Quédate callado: aquí la pertenencia importa más que tener razón"
+          },
+          "map": [
+            {
+              "d": "cv.com",
+              "w": 2
+            },
+            {
+              "d": "dec.con",
+              "w": 2
+            },
+            {
+              "d": "cft.har",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "Voice it carefully, to a few trusted people only",
+            "de": "Äußere es behutsam, nur gegenüber einigen Vertrauten",
+            "es": "Exprésalo con cautela, solo ante unas pocas personas de confianza"
+          },
+          "map": [
+            {
+              "d": "cft.dir",
+              "w": 1
+            },
+            {
+              "d": "dec.con",
+              "w": 1
+            },
+            {
+              "d": "cft.har",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

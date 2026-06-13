@@ -1,0 +1,2777 @@
+{
+  "version": 1,
+  "note": "Forced-tradeoff interview. Each option's `map` lists dimensions (dot-path) it supports with integer weight w. An empty map is intentional (that option signals the ABSENCE of the contrasting dimension). Scored by scripts/score.py. NEVER store the user's chosen option text — only computed scores. Dimension legend: see references/schema.md.",
+  "questions": [
+    {
+      "id": "cv01",
+      "cat": "core_values",
+      "q": {
+        "en": "When your biggest personal ambition and your family's stability pull in opposite directions, which usually wins?",
+        "de": "Wenn dein größter persönlicher Ehrgeiz und die Stabilität deiner Familie in entgegengesetzte Richtungen ziehen, was gewinnt meistens?",
+        "es": "Cuando tu mayor ambición personal y la estabilidad de tu familia tiran en direcciones opuestas, ¿qué suele ganar?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "I protect the family's stability",
+            "de": "Ich schütze die Stabilität der Familie",
+            "es": "Protejo la estabilidad de la familia"
+          },
+          "map": [
+            {
+              "d": "cv.fam",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "I pursue the ambition",
+            "de": "Ich verfolge den Ehrgeiz",
+            "es": "Persigo la ambición"
+          },
+          "map": [
+            {
+              "d": "cv.ach",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv02",
+      "cat": "core_values",
+      "q": {
+        "en": "Which life would feel more like a trap to you?",
+        "de": "Welches Leben würde sich für dich eher wie eine Falle anfühlen?",
+        "es": "¿Qué vida te parecería más una trampa?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Secure and stable, but I can't choose how I spend my days",
+            "de": "Sicher und stabil, aber ich kann nicht selbst bestimmen, wie ich meine Tage verbringe",
+            "es": "Segura y estable, pero no puedo elegir cómo paso mis días"
+          },
+          "map": [
+            {
+              "d": "cv.fre",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Free to choose, but income and the future are uncertain",
+            "de": "Frei in der Wahl, aber Einkommen und Zukunft sind ungewiss",
+            "es": "Libre para elegir, pero los ingresos y el futuro son inciertos"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv03",
+      "cat": "core_values",
+      "q": {
+        "en": "You can master a field that fascinates you for little money, or do lucrative work you find dull. Which?",
+        "de": "Du kannst ein Fachgebiet meistern, das dich fasziniert, aber wenig einbringt, oder lukrative Arbeit machen, die du langweilig findest. Was wählst du?",
+        "es": "Puedes dominar un campo que te fascina por poco dinero, o hacer un trabajo lucrativo que te resulta aburrido. ¿Qué eliges?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Master the fascinating field",
+            "de": "Das faszinierende Fachgebiet meistern",
+            "es": "Dominar el campo fascinante"
+          },
+          "map": [
+            {
+              "d": "cv.lrn",
+              "w": 3
+            },
+            {
+              "d": "cv.cur",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Take the lucrative, dull work",
+            "de": "Die lukrative, langweilige Arbeit nehmen",
+            "es": "Aceptar el trabajo lucrativo y aburrido"
+          },
+          "map": [
+            {
+              "d": "cv.wlt",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv04",
+      "cat": "core_values",
+      "q": {
+        "en": "Which would bother you more at the end of your life?",
+        "de": "Was würde dich am Ende deines Lebens mehr stören?",
+        "es": "¿Qué te molestaría más al final de tu vida?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "I was admired and respected, but didn't really help anyone",
+            "de": "Ich wurde bewundert und respektiert, habe aber niemandem wirklich geholfen",
+            "es": "Fui admirado y respetado, pero no ayudé de verdad a nadie"
+          },
+          "map": [
+            {
+              "d": "cv.ctr",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "I helped many people, but was never recognized for it",
+            "de": "Ich habe vielen Menschen geholfen, wurde dafür aber nie anerkannt",
+            "es": "Ayudé a mucha gente, pero nunca me reconocieron por ello"
+          },
+          "map": [
+            {
+              "d": "cv.sta",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv05",
+      "cat": "core_values",
+      "q": {
+        "en": "Your family wants more of your time and presence than you naturally want to give. You...",
+        "de": "Deine Familie will mehr von deiner Zeit und Präsenz, als du von Natur aus geben möchtest. Du ...",
+        "es": "Tu familia quiere más de tu tiempo y presencia de lo que tú naturalmente quieres dar. Tú..."
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Give up some personal freedom to be more present",
+            "de": "Gibst etwas persönliche Freiheit auf, um präsenter zu sein",
+            "es": "Renuncias a algo de libertad personal para estar más presente"
+          },
+          "map": [
+            {
+              "d": "cv.fam",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Protect my autonomy and ask them to adjust",
+            "de": "Schützt deine Autonomie und bittest sie, sich anzupassen",
+            "es": "Proteges tu autonomía y les pides que se adapten"
+          },
+          "map": [
+            {
+              "d": "cv.fre",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv06",
+      "cat": "core_values",
+      "q": {
+        "en": "A safe path guarantees a good-enough life. A risky path might lead to something great — or to failure. Default?",
+        "de": "Ein sicherer Weg garantiert ein ausreichend gutes Leben. Ein riskanter Weg könnte zu etwas Großartigem führen — oder ins Scheitern. Wohin tendierst du?",
+        "es": "Un camino seguro garantiza una vida lo bastante buena. Un camino arriesgado podría llevar a algo grande — o al fracaso. ¿Hacia dónde te inclinas?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "The safe, good-enough path",
+            "de": "Der sichere, ausreichend gute Weg",
+            "es": "El camino seguro y lo bastante bueno"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Reach for great and risk failing",
+            "de": "Nach Großartigem greifen und das Scheitern riskieren",
+            "es": "Apostar por algo grande y arriesgarte a fracasar"
+          },
+          "map": [
+            {
+              "d": "cv.ach",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv07",
+      "cat": "core_values",
+      "q": {
+        "en": "A tight community brings obligations, expectations, and showing up even when it's inconvenient. Worth it?",
+        "de": "Eine enge Gemeinschaft bringt Verpflichtungen, Erwartungen und das Erscheinen auch dann, wenn es ungelegen kommt. Ist das es wert?",
+        "es": "Una comunidad unida trae obligaciones, expectativas y estar presente incluso cuando no te conviene. ¿Vale la pena?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Yes — deep belonging is worth the obligations",
+            "de": "Ja — tiefe Zugehörigkeit ist die Verpflichtungen wert",
+            "es": "Sí — la pertenencia profunda vale las obligaciones"
+          },
+          "map": [
+            {
+              "d": "cv.com",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "No — I'd rather keep my independence",
+            "de": "Nein — ich behalte lieber meine Unabhängigkeit",
+            "es": "No — prefiero conservar mi independencia"
+          },
+          "map": [
+            {
+              "d": "cv.fre",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv08",
+      "cat": "core_values",
+      "q": {
+        "en": "When facing something you genuinely can't control, what do you actually lean on?",
+        "de": "Wenn du etwas gegenüberstehst, das du wirklich nicht kontrollieren kannst, worauf verlässt du dich tatsächlich?",
+        "es": "Cuando te enfrentas a algo que realmente no puedes controlar, ¿en qué te apoyas de verdad?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Faith or trust in something larger than myself",
+            "de": "Glaube oder Vertrauen in etwas, das größer ist als ich",
+            "es": "Fe o confianza en algo más grande que yo"
+          },
+          "map": [
+            {
+              "d": "cv.fth",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "My own preparation and reasoning",
+            "de": "Meine eigene Vorbereitung und mein Verstand",
+            "es": "Mi propia preparación y mi razonamiento"
+          },
+          "map": [
+            {
+              "d": "dec.evi",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv09",
+      "cat": "core_values",
+      "q": {
+        "en": "Two jobs, equal hours. Which do you take?",
+        "de": "Zwei Jobs, gleiche Stunden. Welchen nimmst du?",
+        "es": "Dos trabajos, las mismas horas. ¿Cuál aceptas?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Double the pay — the product is legal, but you're not proud of it",
+            "de": "Doppeltes Gehalt — das Produkt ist legal, aber du bist nicht stolz darauf",
+            "es": "El doble de sueldo — el producto es legal, pero no te enorgullece"
+          },
+          "map": [
+            {
+              "d": "cv.wlt",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Half the pay — you'd feel the cut — but the work clearly helps people",
+            "de": "Halbes Gehalt — du würdest die Kürzung spüren — aber die Arbeit hilft Menschen sichtbar",
+            "es": "La mitad del sueldo — notarías el recorte — pero el trabajo claramente ayuda a la gente"
+          },
+          "map": [
+            {
+              "d": "cv.ctr",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv10",
+      "cat": "core_values",
+      "q": {
+        "en": "Stay an expert in what you've mastered, or repeatedly start over as a beginner in things that fascinate you?",
+        "de": "Experte in dem bleiben, was du gemeistert hast, oder immer wieder als Anfänger in Dingen neu anfangen, die dich faszinieren?",
+        "es": "¿Seguir siendo experto en lo que ya dominas, o empezar una y otra vez como principiante en cosas que te fascinan?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Stay the expert and deepen mastery",
+            "de": "Der Experte bleiben und die Meisterschaft vertiefen",
+            "es": "Seguir siendo el experto y profundizar el dominio"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 1
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Keep starting over, chasing curiosity",
+            "de": "Immer wieder neu anfangen und der Neugier folgen",
+            "es": "Empezar de nuevo una y otra vez, siguiendo la curiosidad"
+          },
+          "map": [
+            {
+              "d": "cv.cur",
+              "w": 3
+            },
+            {
+              "d": "cv.lrn",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv11",
+      "cat": "core_values",
+      "q": {
+        "en": "A prestigious title comes with visibility, scrutiny, and less control of your time. Take it?",
+        "de": "Ein angesehener Titel bringt Sichtbarkeit, kritische Beobachtung und weniger Kontrolle über deine Zeit. Nimmst du ihn an?",
+        "es": "Un título prestigioso conlleva visibilidad, escrutinio y menos control sobre tu tiempo. ¿Lo aceptas?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Yes — the prestige is worth it",
+            "de": "Ja — das Prestige ist es wert",
+            "es": "Sí — el prestigio vale la pena"
+          },
+          "map": [
+            {
+              "d": "cv.sta",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "No — I'd keep my freedom and privacy",
+            "de": "Nein — ich behalte meine Freiheit und Privatsphäre",
+            "es": "No — conservaría mi libertad y mi privacidad"
+          },
+          "map": [
+            {
+              "d": "cv.fre",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv12",
+      "cat": "core_values",
+      "q": {
+        "en": "Would you rather be the person who quietly knows the most, or the one everyone sees as the expert?",
+        "de": "Wärst du lieber die Person, die im Stillen am meisten weiß, oder die, die alle als den Experten sehen?",
+        "es": "¿Preferirías ser la persona que en silencio sabe más que nadie, o la que todos ven como el experto?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Quietly knows the most",
+            "de": "Im Stillen am meisten wissen",
+            "es": "Ser quien más sabe, en silencio"
+          },
+          "map": [
+            {
+              "d": "cv.lrn",
+              "w": 2
+            },
+            {
+              "d": "cv.cur",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Publicly seen as the expert",
+            "de": "Öffentlich als der Experte gelten",
+            "es": "Ser visto públicamente como el experto"
+          },
+          "map": [
+            {
+              "d": "cv.sta",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv13",
+      "cat": "core_values",
+      "q": {
+        "en": "Acting on what you believe is sacred or morally right would cost you a real, concrete advantage. You...",
+        "de": "Nach dem zu handeln, was du für heilig oder moralisch richtig hältst, würde dich einen echten, konkreten Vorteil kosten. Du ...",
+        "es": "Actuar según lo que crees sagrado o moralmente correcto te costaría una ventaja real y concreta. Tú..."
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Follow the principle and accept the cost",
+            "de": "Folgst dem Prinzip und nimmst den Preis in Kauf",
+            "es": "Sigues el principio y aceptas el costo"
+          },
+          "map": [
+            {
+              "d": "cv.fth",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Take the practical advantage; principle is a luxury here",
+            "de": "Nimmst den praktischen Vorteil; Prinzipien sind hier ein Luxus",
+            "es": "Tomas la ventaja práctica; el principio aquí es un lujo"
+          },
+          "map": [
+            {
+              "d": "cv.wlt",
+              "w": 1
+            },
+            {
+              "d": "dec.evi",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv14",
+      "cat": "core_values",
+      "q": {
+        "en": "Would you take a 20% pay cut to live near family and lifelong friends rather than move far for the better job?",
+        "de": "Würdest du 20 % Gehaltskürzung in Kauf nehmen, um in der Nähe von Familie und langjährigen Freunden zu leben, statt für den besseren Job weit wegzuziehen?",
+        "es": "¿Aceptarías un recorte del 20 % de sueldo para vivir cerca de tu familia y amigos de toda la vida en lugar de mudarte lejos por el mejor trabajo?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Yes — stay near my people",
+            "de": "Ja — in der Nähe meiner Leute bleiben",
+            "es": "Sí — quedarme cerca de los míos"
+          },
+          "map": [
+            {
+              "d": "cv.com",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "No — take the better job, rebuild socially elsewhere",
+            "de": "Nein — den besseren Job nehmen und mir woanders ein neues Umfeld aufbauen",
+            "es": "No — aceptar el mejor trabajo y reconstruir mi círculo en otro lugar"
+          },
+          "map": [
+            {
+              "d": "cv.wlt",
+              "w": 1
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cv15",
+      "cat": "core_values",
+      "q": {
+        "en": "When life goes badly through no fault of your own, what's your honest response?",
+        "de": "Wenn es im Leben ohne dein Verschulden schlecht läuft, was ist deine ehrliche Reaktion?",
+        "es": "Cuando la vida va mal sin que sea tu culpa, ¿cuál es tu reacción honesta?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Trust there's a meaning or a plan I can't yet see",
+            "de": "Darauf vertrauen, dass es einen Sinn oder einen Plan gibt, den ich noch nicht sehen kann",
+            "es": "Confiar en que hay un sentido o un plan que aún no alcanzo a ver"
+          },
+          "map": [
+            {
+              "d": "cv.fth",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Accept it's random and focus on what I can control",
+            "de": "Akzeptieren, dass es Zufall ist, und mich auf das konzentrieren, was ich kontrollieren kann",
+            "es": "Aceptar que es algo aleatorio y centrarme en lo que sí puedo controlar"
+          },
+          "map": [
+            {
+              "d": "cv.fre",
+              "w": 1
+            },
+            {
+              "d": "dec.evi",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tr01",
+      "cat": "tradeoffs",
+      "q": {
+        "en": "A hard truth would upset someone you care about but help them in the long run. Do you say it?",
+        "de": "Eine harte Wahrheit würde jemanden verletzen, der dir wichtig ist, ihm aber langfristig helfen. Sagst du sie?",
+        "es": "Una verdad dura disgustaría a alguien que te importa, pero le ayudaría a la larga. ¿Se la dices?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Say it — truth over comfort",
+            "de": "Sag sie – Wahrheit vor Bequemlichkeit",
+            "es": "Dísela – la verdad por encima de la comodidad"
+          },
+          "map": [
+            {
+              "d": "cft.dir",
+              "w": 2
+            },
+            {
+              "d": "par.emo",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Hold it — protect the relationship and the peace",
+            "de": "Behalt sie für dich – schütze die Beziehung und den Frieden",
+            "es": "Cállatela – protege la relación y la paz"
+          },
+          "map": [
+            {
+              "d": "cft.har",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tr02",
+      "cat": "tradeoffs",
+      "q": {
+        "en": "Which is the better rule for living?",
+        "de": "Welche Lebensregel ist die bessere?",
+        "es": "¿Cuál es la mejor regla para vivir?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Set principles and hold to them even when it's costly",
+            "de": "Prinzipien setzen und an ihnen festhalten, auch wenn es dich etwas kostet",
+            "es": "Fijar principios y mantenerlos aunque cueste"
+          },
+          "map": [
+            {
+              "d": "cft.bnd",
+              "w": 2
+            },
+            {
+              "d": "dec.lng",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Adapt to each situation; rigid rules cause harm",
+            "de": "Sich jeder Situation anpassen; starre Regeln richten Schaden an",
+            "es": "Adaptarte a cada situación; las reglas rígidas hacen daño"
+          },
+          "map": [
+            {
+              "d": "par.cre",
+              "w": 2
+            },
+            {
+              "d": "dec.int",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tr03",
+      "cat": "tradeoffs",
+      "q": {
+        "en": "For your own life this year, which do you optimize?",
+        "de": "Worauf optimierst du dein eigenes Leben in diesem Jahr?",
+        "es": "Para tu propia vida este año, ¿qué optimizas?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Enjoyment and happiness now",
+            "de": "Genuss und Glück jetzt",
+            "es": "Disfrute y felicidad ahora"
+          },
+          "map": []
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Growth and capability, even if this year is harder",
+            "de": "Wachstum und Können, auch wenn dieses Jahr härter wird",
+            "es": "Crecimiento y capacidad, aunque este año sea más duro"
+          },
+          "map": [
+            {
+              "d": "dec.lng",
+              "w": 2
+            },
+            {
+              "d": "cv.lrn",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tr04",
+      "cat": "tradeoffs",
+      "q": {
+        "en": "A loyal teammate underperforms; a stranger would clearly do better. Who do you keep?",
+        "de": "Ein loyales Teammitglied bringt zu wenig Leistung; ein Fremder wäre klar besser. Wen behältst du?",
+        "es": "Un compañero leal rinde poco; un desconocido lo haría claramente mejor. ¿Con quién te quedas?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Keep the loyal underperformer",
+            "de": "Den loyalen Schwächeren behalten",
+            "es": "Quedarte con el leal que rinde poco"
+          },
+          "map": [
+            {
+              "d": "cv.com",
+              "w": 2
+            },
+            {
+              "d": "cft.har",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Bring in the better performer",
+            "de": "Den Stärkeren holen",
+            "es": "Traer al que rinde mejor"
+          },
+          "map": [
+            {
+              "d": "cv.ach",
+              "w": 2
+            },
+            {
+              "d": "cft.dir",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tr05",
+      "cat": "tradeoffs",
+      "q": {
+        "en": "Be honest — which do you protect harder in your own life?",
+        "de": "Sei ehrlich – was schützt du in deinem Leben stärker?",
+        "es": "Sé sincero – ¿qué proteges con más fuerza en tu vida?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "My independence and ability to walk away",
+            "de": "Meine Unabhängigkeit und die Freiheit, zu gehen",
+            "es": "Mi independencia y mi capacidad de marcharme"
+          },
+          "map": [
+            {
+              "d": "cv.fre",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "My commitments and the people counting on me",
+            "de": "Meine Verpflichtungen und die Menschen, die auf mich zählen",
+            "es": "Mis compromisos y la gente que cuenta conmigo"
+          },
+          "map": [
+            {
+              "d": "cv.com",
+              "w": 1
+            },
+            {
+              "d": "cft.har",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tr06",
+      "cat": "tradeoffs",
+      "q": {
+        "en": "You're comfortable. An option could make life much better but might also make it worse. Your bias?",
+        "de": "Dir geht es gut. Eine Option könnte vieles besser machen – aber vielleicht auch schlechter. Wohin neigst du?",
+        "es": "Estás bien. Una opción podría mejorarlo mucho, pero también podría empeorarlo. ¿Hacia dónde te inclinas?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Don't rock a good thing",
+            "de": "Eine gute Sache nicht aufs Spiel setzen",
+            "es": "No tocar lo que ya funciona"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Push for better and accept the downside",
+            "de": "Auf mehr setzen und das Risiko in Kauf nehmen",
+            "es": "Ir a por más y aceptar la parte mala"
+          },
+          "map": [
+            {
+              "d": "risk.fin",
+              "w": 1
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tr07",
+      "cat": "tradeoffs",
+      "q": {
+        "en": "Someone wrongs you but is clearly struggling. Your instinct?",
+        "de": "Jemand tut dir Unrecht, hat es aber sichtlich schwer. Dein Instinkt?",
+        "es": "Alguien te perjudica, pero está claramente pasándolo mal. ¿Tu instinto?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Hold them accountable — fairness matters",
+            "de": "Zur Verantwortung ziehen – Fairness zählt",
+            "es": "Pedirle cuentas – la justicia importa"
+          },
+          "map": [
+            {
+              "d": "cft.dir",
+              "w": 2
+            },
+            {
+              "d": "cft.bnd",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Extend grace — they're hurting",
+            "de": "Nachsicht zeigen – die Person leidet",
+            "es": "Mostrarle indulgencia – está sufriendo"
+          },
+          "map": [
+            {
+              "d": "cv.ctr",
+              "w": 1
+            },
+            {
+              "d": "cft.har",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa01",
+      "cat": "parenting",
+      "q": {
+        "en": "Your 9-year-old wants to walk to a friend's house alone, on a route with small real risks. You...",
+        "de": "Dein 9-jähriges Kind möchte allein zu einem Freund laufen, auf einem Weg mit kleinen, echten Risiken. Du...",
+        "es": "Tu hijo de 9 años quiere ir caminando solo a casa de un amigo, por una ruta con pequeños riesgos reales. Tú..."
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Let them go — independence is built by doing",
+            "de": "Lässt es gehen — Selbstständigkeit entsteht durchs Tun",
+            "es": "Lo dejas ir: la autonomía se construye haciéndolo"
+          },
+          "map": [
+            {
+              "d": "par.ind",
+              "w": 3
+            },
+            {
+              "d": "par.rsk",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Go along or drive them — not worth the risk yet",
+            "de": "Begleitest es oder fährst es hin — das Risiko ist es noch nicht wert",
+            "es": "Lo acompañas o lo llevas en coche: aún no vale la pena el riesgo"
+          },
+          "map": [
+            {
+              "d": "par.dis",
+              "w": 1
+            },
+            {
+              "d": "cv.sec",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa02",
+      "cat": "parenting",
+      "q": {
+        "en": "If your child could have only ONE, which do you choose?",
+        "de": "Wenn dein Kind nur EINS haben könnte, wofür entscheidest du dich?",
+        "es": "Si tu hijo solo pudiera tener UNA cosa, ¿cuál eliges?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Independence and self-reliance",
+            "de": "Selbstständigkeit und Eigenverantwortung",
+            "es": "Autonomía y autosuficiencia"
+          },
+          "map": [
+            {
+              "d": "par.ind",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Academic excellence",
+            "de": "Hervorragende schulische Leistungen",
+            "es": "Excelencia académica"
+          },
+          "map": [
+            {
+              "d": "par.acd",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa03",
+      "cat": "parenting",
+      "q": {
+        "en": "Your child wants to abandon a hard commitment they chose (an instrument, a sport) halfway through. You...",
+        "de": "Dein Kind will eine schwierige Verpflichtung, die es selbst gewählt hat (ein Instrument, eine Sportart), auf halbem Weg aufgeben. Du...",
+        "es": "Tu hijo quiere abandonar a mitad de camino un compromiso difícil que él mismo eligió (un instrumento, un deporte). Tú..."
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Make them finish what they started",
+            "de": "Bestehst darauf, dass es zu Ende bringt, was es angefangen hat",
+            "es": "Le haces terminar lo que empezó"
+          },
+          "map": [
+            {
+              "d": "par.dis",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Let them quit and explore something new",
+            "de": "Lässt es aufhören und etwas Neues ausprobieren",
+            "es": "Le dejas dejarlo y explorar algo nuevo"
+          },
+          "map": [
+            {
+              "d": "par.cre",
+              "w": 2
+            },
+            {
+              "d": "par.ind",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa04",
+      "cat": "parenting",
+      "q": {
+        "en": "Your child fails publicly and is devastated. Your priority in that moment?",
+        "de": "Dein Kind scheitert öffentlich und ist am Boden zerstört. Deine Priorität in diesem Moment?",
+        "es": "Tu hijo fracasa en público y está destrozado. ¿Tu prioridad en ese momento?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Comfort and shield them from the pain",
+            "de": "Es trösten und vor dem Schmerz schützen",
+            "es": "Consolarlo y protegerlo del dolor"
+          },
+          "map": [
+            {
+              "d": "cft.har",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Help them sit with it and learn it won't break them",
+            "de": "Ihm helfen, es auszuhalten und zu lernen, dass es daran nicht zerbricht",
+            "es": "Ayudarlo a sostenerlo y aprender que no lo quebrará"
+          },
+          "map": [
+            {
+              "d": "par.emo",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa05",
+      "cat": "parenting",
+      "q": {
+        "en": "Be honest — which keeps you up at night more?",
+        "de": "Sei ehrlich — was hält dich nachts eher wach?",
+        "es": "Sé sincero: ¿qué te quita más el sueño?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "That my child is unhappy",
+            "de": "Dass mein Kind unglücklich ist",
+            "es": "Que mi hijo sea infeliz"
+          },
+          "map": [
+            {
+              "d": "cv.fam",
+              "w": 1
+            },
+            {
+              "d": "par.emo",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "That my child is wasting their potential",
+            "de": "Dass mein Kind sein Potenzial verschwendet",
+            "es": "Que mi hijo desperdicie su potencial"
+          },
+          "map": [
+            {
+              "d": "par.acd",
+              "w": 2
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa06",
+      "cat": "parenting",
+      "q": {
+        "en": "Childhood should mostly involve...",
+        "de": "Kindheit sollte vor allem aus Folgendem bestehen...",
+        "es": "La infancia debería consistir sobre todo en..."
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Real risk — climbing high, getting hurt, failing; that's how they grow",
+            "de": "Echtes Risiko — hoch klettern, sich verletzen, scheitern; so wachsen sie",
+            "es": "Riesgo real: trepar alto, hacerse daño, fracasar; así crecen"
+          },
+          "map": [
+            {
+              "d": "par.rsk",
+              "w": 3
+            },
+            {
+              "d": "par.ind",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Careful supervision — protect them; there's time for risk later",
+            "de": "Sorgfältige Aufsicht — sie beschützen; für Risiko ist später noch Zeit",
+            "es": "Supervisión cuidadosa: protegerlos; ya habrá tiempo para el riesgo"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 1
+            },
+            {
+              "d": "par.dis",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa07",
+      "cat": "parenting",
+      "q": {
+        "en": "Your 14-year-old wants a smartphone with social media, like their friends. You...",
+        "de": "Dein 14-jähriges Kind möchte ein Smartphone mit Social Media, wie seine Freunde. Du...",
+        "es": "Tu hijo de 14 años quiere un móvil con redes sociales, como sus amigos. Tú..."
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Allow it with light guidance — they need to learn to live with tech",
+            "de": "Erlaubst es mit leichter Begleitung — es muss lernen, mit Technik zu leben",
+            "es": "Lo permites con una guía ligera: tiene que aprender a vivir con la tecnología"
+          },
+          "map": [
+            {
+              "d": "par.tec",
+              "w": 3
+            },
+            {
+              "d": "par.ind",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Restrict hard — delay it as long as possible",
+            "de": "Schränkst es stark ein — so lange wie möglich hinauszögern",
+            "es": "Lo restringes con firmeza: lo retrasas todo lo posible"
+          },
+          "map": [
+            {
+              "d": "par.dis",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa08",
+      "cat": "parenting",
+      "q": {
+        "en": "After school, what matters more for your child?",
+        "de": "Was ist nach der Schule wichtiger für dein Kind?",
+        "es": "Después del colegio, ¿qué importa más para tu hijo?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Time with friends and free play",
+            "de": "Zeit mit Freunden und freies Spiel",
+            "es": "Tiempo con amigos y juego libre"
+          },
+          "map": [
+            {
+              "d": "par.soc",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Structured enrichment, tutoring, skill-building",
+            "de": "Strukturierte Förderung, Nachhilfe, Kompetenzaufbau",
+            "es": "Actividades estructuradas, clases de apoyo, desarrollo de habilidades"
+          },
+          "map": [
+            {
+              "d": "par.acd",
+              "w": 2
+            },
+            {
+              "d": "par.dis",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa09",
+      "cat": "parenting",
+      "q": {
+        "en": "Which child would you be prouder to have raised?",
+        "de": "Auf welches Kind wärst du stolzer, es großgezogen zu haben?",
+        "es": "¿A qué hijo estarías más orgulloso de haber criado?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "A disciplined, reliable, hard-working one",
+            "de": "Ein diszipliniertes, zuverlässiges, fleißiges Kind",
+            "es": "Uno disciplinado, fiable y trabajador"
+          },
+          "map": [
+            {
+              "d": "par.dis",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "An original, imaginative, rule-bending one",
+            "de": "Ein originelles, fantasievolles, regelbrechendes Kind",
+            "es": "Uno original, imaginativo y que rompe las reglas"
+          },
+          "map": [
+            {
+              "d": "par.cre",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa10",
+      "cat": "parenting",
+      "q": {
+        "en": "Your teenager makes a decision you think is a mistake, but it's reversible. You...",
+        "de": "Dein Teenager trifft eine Entscheidung, die du für einen Fehler hältst, die aber umkehrbar ist. Du...",
+        "es": "Tu adolescente toma una decisión que crees que es un error, pero es reversible. Tú..."
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Let them make it and learn",
+            "de": "Lässt es sie treffen und daraus lernen",
+            "es": "Le dejas tomarla y aprender"
+          },
+          "map": [
+            {
+              "d": "par.ind",
+              "w": 2
+            },
+            {
+              "d": "par.rsk",
+              "w": 1
+            },
+            {
+              "d": "par.emo",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Step in and steer them right",
+            "de": "Greifst ein und lenkst es in die richtige Richtung",
+            "es": "Intervienes y lo encaminas"
+          },
+          "map": [
+            {
+              "d": "par.dis",
+              "w": 2
+            },
+            {
+              "d": "dec.exp",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa11",
+      "cat": "parenting",
+      "q": {
+        "en": "Screen time on a free afternoon — your real stance?",
+        "de": "Bildschirmzeit an einem freien Nachmittag — deine wahre Haltung?",
+        "es": "Tiempo de pantalla en una tarde libre: ¿tu postura real?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Fine in moderation; it's their world, teach balance",
+            "de": "In Maßen in Ordnung; es ist ihre Welt, bring ihnen Balance bei",
+            "es": "Bien con moderación; es su mundo, enséñale equilibrio"
+          },
+          "map": [
+            {
+              "d": "par.tec",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Push them off screens toward the physical world",
+            "de": "Hol sie vom Bildschirm weg, hin zur physischen Welt",
+            "es": "Apártalo de las pantallas hacia el mundo físico"
+          },
+          "map": [
+            {
+              "d": "par.soc",
+              "w": 1
+            },
+            {
+              "d": "par.cre",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pa12",
+      "cat": "parenting",
+      "q": {
+        "en": "Your shy child dreads a birthday party. The real tradeoff: stretch them socially, or honor their temperament. You...",
+        "de": "Dein schüchternes Kind graut sich vor einer Geburtstagsfeier. Der echte Abwägungspunkt: es sozial herausfordern oder seinem Naturell gerecht werden. Du...",
+        "es": "A tu hijo tímido le da pavor una fiesta de cumpleaños. El verdadero dilema: estirarlo socialmente u honrar su temperamento. Tú..."
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Encourage them to go and push through it — social growth",
+            "de": "Ermutigst es hinzugehen und durchzuhalten — soziales Wachstum",
+            "es": "Lo animas a ir y a superarlo: crecimiento social"
+          },
+          "map": [
+            {
+              "d": "par.soc",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Let them stay home — respect who they are",
+            "de": "Lässt es zu Hause bleiben — respektierst, wer es ist",
+            "es": "Le dejas quedarse en casa: respetas quién es"
+          },
+          "map": [
+            {
+              "d": "par.emo",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rk01",
+      "cat": "risk",
+      "q": {
+        "en": "You have a solid €50k saved and the rest of your finances are fine. An opportunity could 5x it or lose it all, 50/50. You...",
+        "de": "Du hast solide 50.000 € gespart und deine Finanzen sind ansonsten in Ordnung. Eine Gelegenheit könnte den Betrag verfünffachen oder ihn komplett verlieren, 50/50. Du …",
+        "es": "Tienes unos sólidos 50.000 € ahorrados y el resto de tus finanzas va bien. Una oportunidad podría multiplicarlos por 5 o perderlo todo, 50/50. Tú …"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Pass — keep the safety",
+            "de": "Lässt es bleiben — behältst die Sicherheit",
+            "es": "Pasas — conservas la seguridad"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Take the bet",
+            "de": "Gehst die Wette ein",
+            "es": "Aceptas la apuesta"
+          },
+          "map": [
+            {
+              "d": "risk.fin",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rk02",
+      "cat": "risk",
+      "q": {
+        "en": "A stable job paying €80k, or an uncertain career that could pay €250k or collapse. Which?",
+        "de": "Ein sicherer Job mit 80.000 € oder eine ungewisse Laufbahn, die 250.000 € einbringen oder scheitern könnte. Was nimmst du?",
+        "es": "Un trabajo estable que paga 80.000 € o una carrera incierta que podría pagar 250.000 € o derrumbarse. ¿Cuál eliges?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Stable €80k",
+            "de": "Sichere 80.000 €",
+            "es": "80.000 € estables"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Uncertain career, up to €250k",
+            "de": "Ungewisse Laufbahn, bis zu 250.000 €",
+            "es": "Carrera incierta, hasta 250.000 €"
+          },
+          "map": [
+            {
+              "d": "risk.car",
+              "w": 3
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rk03",
+      "cat": "risk",
+      "q": {
+        "en": "Leave a respected, secure career to start over at the bottom of something you believe in?",
+        "de": "Eine angesehene, sichere Laufbahn aufgeben, um in etwas, woran du glaubst, ganz unten neu anzufangen?",
+        "es": "¿Dejar una carrera respetada y segura para empezar de cero, desde abajo, en algo en lo que crees?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "No — too much to give up",
+            "de": "Nein — zu viel aufzugeben",
+            "es": "No — es demasiado a lo que renunciar"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Yes — I'd start over",
+            "de": "Ja — ich würde neu anfangen",
+            "es": "Sí — empezaría de cero"
+          },
+          "map": [
+            {
+              "d": "risk.car",
+              "w": 3
+            },
+            {
+              "d": "cv.cur",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rk04",
+      "cat": "risk",
+      "q": {
+        "en": "An extreme activity is thrilling but carries real injury risk. You...",
+        "de": "Eine Extremaktivität ist berauschend, birgt aber ein echtes Verletzungsrisiko. Du …",
+        "es": "Una actividad extrema es emocionante, pero conlleva un riesgo real de lesión. Tú …"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Avoid it; protect my body",
+            "de": "Lässt es; schützt deinen Körper",
+            "es": "La evitas; proteges tu cuerpo"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Do it; the experience is worth the risk",
+            "de": "Machst es; das Erlebnis ist das Risiko wert",
+            "es": "La haces; la experiencia vale el riesgo"
+          },
+          "map": [
+            {
+              "d": "risk.hlt",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rk05",
+      "cat": "risk",
+      "q": {
+        "en": "Which do you actually optimize your health and lifestyle for?",
+        "de": "Worauf richtest du deine Gesundheit und deinen Lebensstil tatsächlich aus?",
+        "es": "¿Para qué optimizas realmente tu salud y tu estilo de vida?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "A long, steady, well-protected life",
+            "de": "Ein langes, ruhiges, gut abgesichertes Leben",
+            "es": "Una vida larga, estable y bien protegida"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "A fuller, more intense life, accepting the wear it brings",
+            "de": "Ein volleres, intensiveres Leben, den Verschleiß in Kauf nehmend",
+            "es": "Una vida más plena e intensa, aceptando el desgaste que trae"
+          },
+          "map": [
+            {
+              "d": "risk.hlt",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rk06",
+      "cat": "risk",
+      "q": {
+        "en": "Letting your child take a real risk that could genuinely hurt them — but would teach them a lot. Your gut?",
+        "de": "Deinem Kind ein echtes Risiko eingehen zu lassen, das ihm wirklich schaden könnte — ihm aber viel beibringen würde. Dein Bauchgefühl?",
+        "es": "Dejar que tu hijo asuma un riesgo real que podría hacerle daño de verdad — pero que le enseñaría mucho. ¿Tu instinto?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Not worth it — their safety first",
+            "de": "Nicht wert — seine Sicherheit zuerst",
+            "es": "No vale la pena — su seguridad primero"
+          },
+          "map": []
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Worth it — over-sheltering is its own harm",
+            "de": "Wert — Überbehütung ist ein Schaden für sich",
+            "es": "Vale la pena — sobreprotegerlo es su propio daño"
+          },
+          "map": [
+            {
+              "d": "risk.par",
+              "w": 3
+            },
+            {
+              "d": "par.rsk",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rk07",
+      "cat": "risk",
+      "q": {
+        "en": "To pursue a big goal, would you take on significant debt or spend your safety net?",
+        "de": "Würdest du für ein großes Ziel erhebliche Schulden aufnehmen oder deinen Notgroschen ausgeben?",
+        "es": "Para perseguir una gran meta, ¿asumirías una deuda considerable o gastarías tu colchón de seguridad?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "No — I always keep a cushion",
+            "de": "Nein — ich halte immer ein Polster",
+            "es": "No — siempre guardo un colchón"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Yes — bet on myself",
+            "de": "Ja — auf mich selbst setzen",
+            "es": "Sí — apuesto por mí mismo"
+          },
+          "map": [
+            {
+              "d": "risk.fin",
+              "w": 3
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rk08",
+      "cat": "risk",
+      "q": {
+        "en": "A new approach could meaningfully boost your energy and capability now, but its long-term effects on your body aren't well understood. You...",
+        "de": "Ein neuer Ansatz könnte deine Energie und Leistungsfähigkeit jetzt spürbar steigern, aber seine langfristigen Auswirkungen auf deinen Körper sind kaum erforscht. Du …",
+        "es": "Un nuevo enfoque podría aumentar de forma notable tu energía y capacidad ahora, pero sus efectos a largo plazo en tu cuerpo no se conocen bien. Tú …"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Wait for the evidence — don't gamble with my body",
+            "de": "Wartest auf die Belege — spielst nicht mit deinem Körper",
+            "es": "Esperas a la evidencia — no juegas con tu cuerpo"
+          },
+          "map": [
+            {
+              "d": "dec.evi",
+              "w": 1
+            },
+            {
+              "d": "cv.sec",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Try it — the gain now is worth the unknown",
+            "de": "Probierst es — der Gewinn jetzt ist das Ungewisse wert",
+            "es": "Lo pruebas — la ganancia de ahora vale lo desconocido"
+          },
+          "map": [
+            {
+              "d": "risk.hlt",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rk09",
+      "cat": "risk",
+      "q": {
+        "en": "Your child wants to do something physically bold — a hard climb, a solo trip, a contact sport — with a real chance of injury. You...",
+        "de": "Dein Kind will etwas körperlich Gewagtes tun — eine schwere Klettertour, eine Solo-Reise, einen Kontaktsport — mit einer echten Verletzungsgefahr. Du …",
+        "es": "Tu hijo quiere hacer algo físicamente audaz — una escalada difícil, un viaje en solitario, un deporte de contacto — con una probabilidad real de lesión. Tú …"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Steer them toward a safer version",
+            "de": "Lenkst es zu einer sichereren Variante",
+            "es": "Lo orientas hacia una versión más segura"
+          },
+          "map": [
+            {
+              "d": "cv.sec",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Let them do the real thing — the growth is worth the risk",
+            "de": "Lässt es das Echte tun — das Wachstum ist das Risiko wert",
+            "es": "Le dejas hacerlo de verdad — el crecimiento vale el riesgo"
+          },
+          "map": [
+            {
+              "d": "risk.par",
+              "w": 3
+            },
+            {
+              "d": "par.rsk",
+              "w": 1
+            },
+            {
+              "d": "par.ind",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de01",
+      "cat": "decision",
+      "q": {
+        "en": "Big decision, limited time. What do you trust more?",
+        "de": "Große Entscheidung, wenig Zeit. Worauf vertraust du eher?",
+        "es": "Gran decisión, poco tiempo. ¿En qué confías más?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "The data and analysis, even against my gut",
+            "de": "Auf die Daten und die Analyse, auch gegen mein Bauchgefühl",
+            "es": "En los datos y el análisis, aunque vayan contra mi instinto"
+          },
+          "map": [
+            {
+              "d": "dec.evi",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "My gut, even against the data",
+            "de": "Auf mein Bauchgefühl, auch gegen die Daten",
+            "es": "En mi instinto, aunque vaya contra los datos"
+          },
+          "map": [
+            {
+              "d": "dec.int",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de02",
+      "cat": "decision",
+      "q": {
+        "en": "Experts strongly recommend X. Your own reasoning says Y. You...",
+        "de": "Fachleute empfehlen dringend X. Deine eigene Überlegung sagt Y. Du...",
+        "es": "Los expertos recomiendan firmemente X. Tu propio razonamiento dice Y. Tú..."
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Defer to the experts",
+            "de": "Richtest dich nach den Fachleuten",
+            "es": "Te dejas guiar por los expertos"
+          },
+          "map": [
+            {
+              "d": "dec.exp",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Trust my own reasoning",
+            "de": "Vertraust deiner eigenen Überlegung",
+            "es": "Confías en tu propio razonamiento"
+          },
+          "map": [
+            {
+              "d": "dec.int",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de03",
+      "cat": "decision",
+      "q": {
+        "en": "Everyone around you disagrees with your decision. You...",
+        "de": "Alle um dich herum sind mit deiner Entscheidung nicht einverstanden. Du...",
+        "es": "Todos a tu alrededor están en desacuerdo con tu decisión. Tú..."
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Reconsider seriously — the crowd is information",
+            "de": "Überdenkst sie ernsthaft — die Mehrheit ist eine Information",
+            "es": "La reconsideras en serio — la mayoría es información"
+          },
+          "map": [
+            {
+              "d": "dec.con",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Hold my line if my reasoning is sound",
+            "de": "Bleibst bei deiner Linie, wenn deine Überlegung stimmig ist",
+            "es": "Mantienes tu postura si tu razonamiento es sólido"
+          },
+          "map": [
+            {
+              "d": "cft.asr",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de04",
+      "cat": "decision",
+      "q": {
+        "en": "When choosing, which time horizon dominates?",
+        "de": "Bei Entscheidungen — welcher Zeithorizont überwiegt?",
+        "es": "Al decidir, ¿qué horizonte temporal predomina?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "The next 1–2 years, concretely",
+            "de": "Die nächsten 1–2 Jahre, konkret",
+            "es": "Los próximos 1–2 años, en concreto"
+          },
+          "map": [
+            {
+              "d": "dec.int",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "The next 10–20 years, even if it costs me now",
+            "de": "Die nächsten 10–20 Jahre, auch wenn es mich jetzt etwas kostet",
+            "es": "Los próximos 10–20 años, aunque me cueste ahora"
+          },
+          "map": [
+            {
+              "d": "dec.lng",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de05",
+      "cat": "decision",
+      "q": {
+        "en": "You distrust a decision. Where do you go to resolve it?",
+        "de": "Du traust einer Entscheidung nicht. Wo holst du dir Klarheit?",
+        "es": "Desconfías de una decisión. ¿Adónde acudes para resolverla?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Run my own analysis and gather data",
+            "de": "Mache meine eigene Analyse und sammle Daten",
+            "es": "Hago mi propio análisis y reúno datos"
+          },
+          "map": [
+            {
+              "d": "dec.evi",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Find the most credible expert and ask",
+            "de": "Suche den glaubwürdigsten Experten und frage nach",
+            "es": "Busco al experto más fiable y le pregunto"
+          },
+          "map": [
+            {
+              "d": "dec.exp",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de06",
+      "cat": "decision",
+      "q": {
+        "en": "Your most reliable compass for people decisions — hiring, trusting, partnering?",
+        "de": "Dein verlässlichster Kompass bei Entscheidungen über Menschen — Einstellen, Vertrauen, Partnerschaften?",
+        "es": "Tu brújula más fiable para decisiones sobre personas — contratar, confiar, asociarte?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Track record and references — evidence",
+            "de": "Werdegang und Referenzen — Belege",
+            "es": "Trayectoria y referencias — pruebas"
+          },
+          "map": [
+            {
+              "d": "dec.evi",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "My read of them — intuition",
+            "de": "Mein Eindruck von ihnen — Intuition",
+            "es": "Mi lectura de la persona — intuición"
+          },
+          "map": [
+            {
+              "d": "dec.int",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "What others who know them say — consensus",
+            "de": "Was andere sagen, die sie kennen — Konsens",
+            "es": "Lo que dicen otros que la conocen — consenso"
+          },
+          "map": [
+            {
+              "d": "dec.con",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de07",
+      "cat": "decision",
+      "q": {
+        "en": "A reward now, or a much bigger reward you must wait years and work for?",
+        "de": "Eine Belohnung jetzt, oder eine viel größere, auf die du Jahre warten und für die du arbeiten musst?",
+        "es": "Una recompensa ahora, o una mucho mayor por la que debes esperar años y trabajar?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Take the reward now",
+            "de": "Die Belohnung jetzt nehmen",
+            "es": "Tomar la recompensa ahora"
+          },
+          "map": []
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Wait and work for the bigger one",
+            "de": "Warten und für die größere arbeiten",
+            "es": "Esperar y trabajar por la mayor"
+          },
+          "map": [
+            {
+              "d": "dec.lng",
+              "w": 2
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de08",
+      "cat": "decision",
+      "q": {
+        "en": "In a field you don't know well — medicine, law, money — your approach is to...",
+        "de": "In einem Bereich, in dem du dich nicht gut auskennst — Medizin, Recht, Geld — gehst du so vor, dass du...",
+        "es": "En un campo que no dominas — medicina, derecho, dinero — tu enfoque es..."
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Find the best expert and largely follow their judgment",
+            "de": "Den besten Experten suchst und seinem Urteil weitgehend folgst",
+            "es": "Buscar al mejor experto y seguir en gran medida su criterio"
+          },
+          "map": [
+            {
+              "d": "dec.exp",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Learn enough to challenge them and decide for myself",
+            "de": "Genug lernst, um ihn zu hinterfragen und selbst zu entscheiden",
+            "es": "Aprender lo suficiente para cuestionarlo y decidir por ti mismo"
+          },
+          "map": [
+            {
+              "d": "dec.evi",
+              "w": 1
+            },
+            {
+              "d": "dec.int",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de09",
+      "cat": "decision",
+      "q": {
+        "en": "Before a major decision, how much do you weight what the trusted people around you think?",
+        "de": "Vor einer wichtigen Entscheidung — wie stark zählt für dich, was die Menschen denken, denen du vertraust?",
+        "es": "Antes de una decisión importante, ¿cuánto pesa lo que piensan las personas de confianza a tu alrededor?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Heavily — if the people I respect disagree, I usually defer",
+            "de": "Stark — wenn die Menschen, die ich respektiere, anderer Meinung sind, gebe ich meist nach",
+            "es": "Mucho — si las personas que respeto discrepan, suelo ceder"
+          },
+          "map": [
+            {
+              "d": "dec.con",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Lightly — I hear them out but decide on my own read",
+            "de": "Wenig — ich höre sie an, entscheide aber nach meinem eigenen Eindruck",
+            "es": "Poco — las escucho, pero decido según mi propia lectura"
+          },
+          "map": [
+            {
+              "d": "dec.int",
+              "w": 1
+            },
+            {
+              "d": "cft.asr",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co01",
+      "cat": "conflict",
+      "q": {
+        "en": "Someone close keeps doing something that bothers you. You...",
+        "de": "Jemand, der dir nahesteht, macht immer wieder etwas, das dich stört. Du…",
+        "es": "Alguien cercano hace constantemente algo que te molesta. Tú…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Tell them directly and soon",
+            "de": "Sprichst es direkt und bald an",
+            "es": "Se lo dices directamente y pronto"
+          },
+          "map": [
+            {
+              "d": "cft.dir",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Let it go to keep the peace, or hint gently",
+            "de": "Lässt es auf sich beruhen, um den Frieden zu wahren, oder deutest es behutsam an",
+            "es": "Lo dejas pasar para no romper la paz, o lo insinúas con tacto"
+          },
+          "map": [
+            {
+              "d": "cft.har",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co02",
+      "cat": "conflict",
+      "q": {
+        "en": "A friend repeatedly asks for favors that drain you. You...",
+        "de": "Ein Freund bittet dich immer wieder um Gefallen, die dich auslaugen. Du…",
+        "es": "Un amigo te pide favores una y otra vez que te agotan. Tú…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Say no clearly and hold the line",
+            "de": "Sagst klar Nein und bleibst dabei",
+            "es": "Dices que no con claridad y te mantienes firme"
+          },
+          "map": [
+            {
+              "d": "cft.bnd",
+              "w": 3
+            },
+            {
+              "d": "cft.dir",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Keep helping — saying no feels worse",
+            "de": "Hilfst weiter – Nein zu sagen fühlt sich schlimmer an",
+            "es": "Sigues ayudando: decir que no se siente peor"
+          },
+          "map": [
+            {
+              "d": "cft.har",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co03",
+      "cat": "conflict",
+      "q": {
+        "en": "In a group making a decision badly, you...",
+        "de": "In einer Gruppe, die eine Entscheidung schlecht trifft, …",
+        "es": "En un grupo que está tomando mal una decisión, tú…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Speak up and push for the right call",
+            "de": "Meldest du dich zu Wort und setzt dich für die richtige Entscheidung ein",
+            "es": "Hablas y empujas por la decisión correcta"
+          },
+          "map": [
+            {
+              "d": "cft.asr",
+              "w": 3
+            },
+            {
+              "d": "cft.dir",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Go along — it's not worth the friction",
+            "de": "Spielst du mit – die Reibung ist es nicht wert",
+            "es": "Sigues la corriente: no vale la fricción"
+          },
+          "map": [
+            {
+              "d": "cft.har",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co04",
+      "cat": "conflict",
+      "q": {
+        "en": "With you, you'd rather people be...",
+        "de": "Dir gegenüber sollen die Leute lieber …",
+        "es": "Contigo, prefieres que la gente sea…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Blunt and honest, even when it stings",
+            "de": "Schonungslos und ehrlich, auch wenn es wehtut",
+            "es": "Franca y honesta, aunque escueza"
+          },
+          "map": [
+            {
+              "d": "cft.dir",
+              "w": 2
+            },
+            {
+              "d": "par.emo",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Gentle and tactful, even if less direct",
+            "de": "Sanft und taktvoll, auch wenn weniger direkt",
+            "es": "Suave y con tacto, aunque sea menos directa"
+          },
+          "map": [
+            {
+              "d": "cft.har",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co05",
+      "cat": "conflict",
+      "q": {
+        "en": "Open conflict makes you...",
+        "de": "Offener Konflikt macht dich…",
+        "es": "El conflicto abierto te…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Energized or fine — I'll have the hard conversation",
+            "de": "Angespornt oder unbeeindruckt – ich führe das schwierige Gespräch",
+            "es": "Energiza o no te afecta: tendrás la conversación difícil"
+          },
+          "map": [
+            {
+              "d": "cft.asr",
+              "w": 2
+            },
+            {
+              "d": "cft.dir",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Uncomfortable — I avoid it where I can",
+            "de": "Unbehaglich – ich gehe ihm aus dem Weg, wo ich kann",
+            "es": "Incomoda: lo evitas donde puedes"
+          },
+          "map": [
+            {
+              "d": "cft.har",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "co06",
+      "cat": "conflict",
+      "q": {
+        "en": "Family expects something that conflicts with your own needs. You...",
+        "de": "Die Familie erwartet etwas, das mit deinen eigenen Bedürfnissen kollidiert. Du…",
+        "es": "La familia espera algo que choca con tus propias necesidades. Tú…"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Set a boundary, even if it disappoints them",
+            "de": "Ziehst eine Grenze, auch wenn du sie damit enttäuschst",
+            "es": "Pones un límite, aunque los decepciones"
+          },
+          "map": [
+            {
+              "d": "cft.bnd",
+              "w": 3
+            },
+            {
+              "d": "cft.dir",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Accommodate them — family comes first",
+            "de": "Kommst ihnen entgegen – Familie geht vor",
+            "es": "Cedes a lo que piden: la familia es lo primero"
+          },
+          "map": [
+            {
+              "d": "cv.fam",
+              "w": 2
+            },
+            {
+              "d": "cft.har",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pr01",
+      "cat": "priorities",
+      "q": {
+        "en": "Honestly, the REAL #1 driver of your major life decisions is:",
+        "de": "Ehrlich: Der ECHTE wichtigste Antrieb bei deinen großen Lebensentscheidungen ist:",
+        "es": "Sé sincero: el motor REAL número 1 de tus grandes decisiones de vida es:"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "My career and what I build",
+            "de": "Meine Karriere und das, was ich aufbaue",
+            "es": "Mi carrera y lo que construyo"
+          },
+          "map": [
+            {
+              "d": "pri.car",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "My family and the people I love",
+            "de": "Meine Familie und die Menschen, die ich liebe",
+            "es": "Mi familia y las personas que quiero"
+          },
+          "map": [
+            {
+              "d": "pri.fam",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "My freedom and autonomy",
+            "de": "Meine Freiheit und Selbstbestimmung",
+            "es": "Mi libertad y mi autonomía"
+          },
+          "map": [
+            {
+              "d": "pri.fre",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "label": {
+            "en": "My sense of purpose and meaning",
+            "de": "Mein Lebenssinn und meine Bedeutung",
+            "es": "Mi sentido de propósito y significado"
+          },
+          "map": [
+            {
+              "d": "pri.pur",
+              "w": 3
+            }
+          ]
+        },
+        {
+          "key": "E",
+          "label": {
+            "en": "My financial security and wealth",
+            "de": "Meine finanzielle Sicherheit und mein Wohlstand",
+            "es": "Mi seguridad financiera y mi riqueza"
+          },
+          "map": [
+            {
+              "d": "pri.wlt",
+              "w": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pr02",
+      "cat": "priorities",
+      "q": {
+        "en": "Forced choice: for the next 5 years you can truly have only one — a career peak, or being deeply present for your family. Which?",
+        "de": "Erzwungene Wahl: In den nächsten 5 Jahren kannst du wirklich nur eins haben – einen Karrierehöhepunkt oder voll für deine Familie da zu sein. Was wählst du?",
+        "es": "Elección forzada: durante los próximos 5 años solo puedes tener una cosa de verdad: un punto álgido en tu carrera o estar plenamente presente para tu familia. ¿Cuál eliges?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Career peak",
+            "de": "Karrierehöhepunkt",
+            "es": "El punto álgido de la carrera"
+          },
+          "map": [
+            {
+              "d": "pri.car",
+              "w": 2
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Present for family",
+            "de": "Für die Familie da sein",
+            "es": "Presente para la familia"
+          },
+          "map": [
+            {
+              "d": "pri.fam",
+              "w": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pr03",
+      "cat": "priorities",
+      "q": {
+        "en": "You've 'made it' financially. What do you reorganize life around next?",
+        "de": "Du hast es finanziell 'geschafft'. Worum richtest du dein Leben als Nächstes neu aus?",
+        "es": "Ya lo has 'logrado' a nivel económico. ¿En torno a qué reorganizas tu vida a partir de ahora?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Maximum freedom — do what I want, when I want",
+            "de": "Maximale Freiheit – tun, was ich will, wann ich will",
+            "es": "Máxima libertad: hacer lo que quiero, cuando quiero"
+          },
+          "map": [
+            {
+              "d": "pri.fre",
+              "w": 2
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Purpose — work that matters, even unpaid",
+            "de": "Sinn – Arbeit, die zählt, auch unbezahlt",
+            "es": "Propósito: trabajo que importa, aunque no me paguen"
+          },
+          "map": [
+            {
+              "d": "pri.pur",
+              "w": 2
+            },
+            {
+              "d": "cv.ctr",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "label": {
+            "en": "Keep building wealth — more is better",
+            "de": "Weiter Vermögen aufbauen – mehr ist besser",
+            "es": "Seguir creando riqueza: más es mejor"
+          },
+          "map": [
+            {
+              "d": "pri.wlt",
+              "w": 2
+            },
+            {
+              "d": "cv.wlt",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pr04",
+      "cat": "priorities",
+      "q": {
+        "en": "To get much more of one, you'd have to give up the other. Which do you protect?",
+        "de": "Um von einem viel mehr zu bekommen, müsstest du das andere aufgeben. Was schützt du?",
+        "es": "Para tener mucho más de una, tendrías que renunciar a la otra. ¿Cuál proteges?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "More freedom and time — even if it caps my income and standing",
+            "de": "Mehr Freiheit und Zeit – auch wenn das mein Einkommen und mein Ansehen begrenzt",
+            "es": "Más libertad y tiempo: aunque eso limite mis ingresos y mi prestigio"
+          },
+          "map": [
+            {
+              "d": "pri.fre",
+              "w": 2
+            },
+            {
+              "d": "cv.fre",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "More success and standing — even if it costs my free time",
+            "de": "Mehr Erfolg und Ansehen – auch wenn das meine freie Zeit kostet",
+            "es": "Más éxito y prestigio: aunque eso me cueste mi tiempo libre"
+          },
+          "map": [
+            {
+              "d": "pri.car",
+              "w": 2
+            },
+            {
+              "d": "cv.ach",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pr05",
+      "cat": "priorities",
+      "q": {
+        "en": "One path doubles your wealth but ties you down for a decade; another keeps you free but you'll never be rich. Which?",
+        "de": "Ein Weg verdoppelt dein Vermögen, bindet dich aber ein Jahrzehnt lang; ein anderer hält dich frei, aber reich wirst du nie. Welcher?",
+        "es": "Un camino duplica tu riqueza pero te ata durante una década; otro te mantiene libre pero nunca serás rico. ¿Cuál?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Stay free, never rich",
+            "de": "Frei bleiben, nie reich werden",
+            "es": "Seguir libre, nunca rico"
+          },
+          "map": [
+            {
+              "d": "pri.fre",
+              "w": 2
+            },
+            {
+              "d": "cv.fre",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Get rich, accept the leash",
+            "de": "Reich werden, die Leine in Kauf nehmen",
+            "es": "Hacerme rico, aceptar la correa"
+          },
+          "map": [
+            {
+              "d": "pri.wlt",
+              "w": 2
+            },
+            {
+              "d": "cv.wlt",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pr06",
+      "cat": "priorities",
+      "q": {
+        "en": "Work that pays exceptionally well but means little to you, or work that matters deeply but pays modestly?",
+        "de": "Arbeit, die außergewöhnlich gut bezahlt, dir aber wenig bedeutet, oder Arbeit, die dir zutiefst wichtig ist, aber bescheiden bezahlt?",
+        "es": "¿Un trabajo que paga excepcionalmente bien pero significa poco para ti, o un trabajo que importa profundamente pero paga modestamente?"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": {
+            "en": "Pays exceptionally, means little",
+            "de": "Zahlt außergewöhnlich, bedeutet wenig",
+            "es": "Paga excepcionalmente, significa poco"
+          },
+          "map": [
+            {
+              "d": "pri.wlt",
+              "w": 2
+            },
+            {
+              "d": "cv.wlt",
+              "w": 1
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "label": {
+            "en": "Matters deeply, pays modestly",
+            "de": "Bedeutet zutiefst viel, zahlt bescheiden",
+            "es": "Importa profundamente, paga modestamente"
+          },
+          "map": [
+            {
+              "d": "pri.pur",
+              "w": 2
+            },
+            {
+              "d": "cv.ctr",
+              "w": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
